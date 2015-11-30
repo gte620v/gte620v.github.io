@@ -1,23 +1,265 @@
----
-layout: default
----
+<html><head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Bob Baxley</title>
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+    <script type="text/javascript" src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi" charset="utf-8"></script>
+    <script type="text/javascript" src="cordpub.js" charset="utf-8"></script>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<link rel="stylesheet" type="text/css" href="https://jpswalsh.github.io/academicons/css/academicons.css">
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
+
+</head>
+<body>
+  <div class="holder">
+    <div class="bar">
+        <img src="https://avatars3.githubusercontent.com/u/2158394?v=3&amp;s=110">
+        <ul>
+            <li class="selected">About</li>
+            <li>Students</li>
+            <li>Courses</li>
+            <li>Talks</li>
+            <li>Awards</li>
+            <li>Links</li>
+            <li>Publications</li>
+        </ul>
+    </div>
+    <div class="header">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="main">
+        <div class="left">
+        <div class="right">
+
+
+
+<h3>
+Bob Baxley, Ph.D.</h3>
+Chief Engineer
+            <br>
+<a href="http://www.bastille.io/" target="_blank">Bastille</a>
+            <br>
+            <br>Adjunct Faculty
+            <br>
+<a href="http://www.ece.gatech.edu/" target="_blank">School of ECE</a>
+            <br>
+<a href="http://www.gatech.edu/" target="_blank">Georgia Tech</a>
+            <br>
+            <br>404.247.5659
+                <br><a href="mailto:bob.baxley@gmail.com">bob@rjbaxley.com</a>
+            <br>
+            <br>
+            <i class="fa fa-github fa-4 icon"></i>
+            <i class="ai ai-google-scholar fa-4x icon"></i>
+            <i class="fa fa-linkedin-square fa-4 icon"></i>
+            <i class="fa fa-twitter fa-4 icon"></i>
+            <br>
+            <br>
+        </div>
+
+            <h2> About </h2>
+            <p>I am a Signal Processing Researcher and Data Scientist.  Currently, I work at Bastille where I am helping to build new and cool radio frequency (RF) technologies in order to secure the Internet of Things.  </p>
+
+                <p>Prior to joining Bastille in 2014, I held various faculty positions at Georgia Tech.  Most recently, I served as the Director of the Software Defined Radio Lab (SDRL), where I researched and built cognitive radios.  I currently hold an adjunct appointment at Georgia Tech through which I advise graduate students and teach courses.</p>
+
+                <p>My academic background is in statistical signal detection, estimation theory, and machine learning. </p>
+
+
+        <h2>Students</h2>
+        <h4>Current Students</h4>
+        <div id="CurrentStudents" class="citation_block"></div>
+        <h4>Graduated Students</h4>
+        <div id="GraduatedStudents" class="citation_block"></div>
+        <h2>Courses Taught</h2>
+        <h4>Academic</h4>
+        <div id="Academic" class="citation_block"></div>
+        <h4>Short Course</h4>
+        <div id="Tutorial" class="citation_block"></div>
+        <h2>Invited Talks</h2>
+        <div id="Talks" class="citation_block"></div>
+        <h2>Awards</h2>
+        <div id="Award" class="citation_block"></div>
+
+        <h2>Publications</h2>
+    <div id="chord_vis"></div>
+    <div id="author_list"></div>
+        <div id="Journal" class="citation_block"></div>
+        <div id="Conference" class="citation_block"></div>
+        <div id="Patent" class="citation_block"></div>
+        <div id="Thesis" class="citation_block"></div>
+
+
+
+        <div>
+        <h2>Links</h2>
+<div style="float: left; margin: 0 20px 0 0;">
+<h3>
+Tools</h3>
+<a href="https://github.com/" target="_blank">GitHub</a><br>
+<a href="http://d3js.org/" target="_blank">D3</a><br>
+<a href="https://bigquery.cloud.google.com/?pli=1" target="_blank">BigQuery</a><br>
+<a href="https://developers.google.com/apps-script/defaultservices" target="_blank">Apps Scripts</a><br>
+<a href="http://jsfiddle.net/" target="_blank">JSFiddle</a><br>
+<a href="https://c9.io/" target="_blank">Cloud 9 IDE</a><br>
+<a href="https://www.sharelatex.com/" target="_blank">ShareLaTex</a><br>
+<a href="https://huboard.com/" target="_blank">HuBoard</a><br>
+<a href="http://www.cvxpy.org/en/latest/" target="_blank">CVXPY</a><br>
+<a href="https://aws.amazon.com/" target="_blank">AWS</a><br>
+<a href="http://www.tableau.com/" target="_blank">Tableau</a><br>
+<a href="http://stedolan.github.io/jq/" target="_blank">JQ</a><br>
+<a href="https://jupyter.org/" target="_blank">Jupyter</a><br>
+<a href="https://www.gnu.org/software/parallel/" target="_blank">GNU Parallel</a><br>
+<br></div>
+<div style="float: left; margin: 0 20px 0 0;">
+<h3>
+Academic Resources</h3>
+<a href="http://scholar.google.com/" target="_blank">Google Scholar</a><br>
+<a href="http://www.wikicfp.com/cfp/" target="_blank">Call for Papers Wiki</a><br>
+<a href="http://stackoverflow.com/questions/6188780/git-latex-workflow" target="_blank">Latex and GIT</a><br>
+<a href="https://docs.google.com/a/rjbaxley.com/file/d/0B-0aJVPCUZrBdmVZVGJvaW45aDQ/preview" target="_blank">Hamming: You and Your Research</a><br>
+<br></div>
+<div style="float: left; margin: 0 20px 0 0;">
+<h3>
+Software Defined RF</h3>
+<a href="http://gnuradio.org/" target="_blank">GNU Radio</a><br>
+<a href="http://www.ettus.com/home" target="_blank">Ettus USRPs</a><br>
+<a href="http://www.orbit-lab.org/" target="_blank">Orbit</a><br>
+<a href="http://nuand.com/" target="_blank">Nuand</a><br>
+<br></div>
+<div style="float: left; margin: 0 20px 0 0;">
+<h3>
+My Other Sites</h3>
+<a href="http://www.ooboboo.com/" target="_blank">ooboboo photography</a><br>
+<br></div>
+<div style="float: left; margin: 0 20px 0 0;">
+<h3>
+Societies</h3>
+<a href="http://www.ieee.org/index.html" target="_blank">IEEE</a><br>
+<a href="http://www.crows.org/" target="_blank">Association of Old Crows</a><br>
+<a href="http://www.acm.org/" target="_blank">ACM</a><br>
+<br></div>
+<div style="float: left; margin: 0 20px 0 0;">
+<h3>
+Public Domain Books</h3>
+<a href="http://www.stanford.edu/~boyd/cvxbook/" target="_blank">Convex Optimization</a><br>
+<a href="http://www.inference.phy.cam.ac.uk/itprnn/book.html" target="_blank">Information Theory, Inference, and Learning Algorithms</a><br>
+<a href="http://statweb.stanford.edu/~tibs/ElemStatLearn/printings/ESLII_print10.pdf" target="_blank">The Elements of Statistical Learning</a><br>
+<a href="http://infolab.stanford.edu/~ullman/mmds.html#latest" target="_blank">Mining of Massive Datasets</a><br>
+<br></div>
 </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+
+    <script type="text/javascript">
+        var formats = {
+            "Patent": '<div class="row"><div class="type_count col">[P%%Counter%%]</div><div class="citation col">%%Authors%%, %%Title%%, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>',
+            "Conference": '<div class="row"><div class="type_count col">[C%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," in <i>Proc. %%Venue%%</i>, pp. %%Pages%%, %%Location%%, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
+            "Journal": '<div class="row"><div class="type_count col">[J%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," <i>%%Venue%%</i>, vol. %%Volume%%, no. %%Number%%, pp. %%Pages%%, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
+            "Thesis": '<div class="row"><div class="type_count col">[T%%Counter%%]</div><div class="citation col">%%Authors%%, <i>%%Title%%</i>, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>'
+        };
+
+        var cord = new cordpub.cordpub();
+        cord.init(
+            '1hkE7P_fHrtiIFAx53xDyUl3gNOp4MSIYLrEwZIJWcaw',
+            formats,
+            "author_list",
+            "chord_vis",
+            d3.scale.category20c(),
+            true,
+            "order by %%Year%% asc, %%Month%% asc"
+        );
+
+
+
+        var formats_students = {
+            "GraduatedStudents": '<div class="row">%%Name%%, <i>%%Title%%</i>, %%Year%%; %%Role%%. %%Misc%%</div>',
+            "CurrentStudents": '<div class="row">%%Name%%, %%Misc%%.</div>'
+        }
+
+
+        var student_list = new cordpub.cordpub();
+        student_list.init(
+            '1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1789498660',
+            formats_students,
+            false,
+            false,
+            false,
+            false,
+            "order by %%Year%% desc"
+        );
+
+        var formats_courses = {
+            "Academic": '<div class="row">%%Title%%, %%Term%% %%Year%%.</div>',
+            "Tutorial": '<div class="row"><i>%%Title%%</i>, %%Venue%%, %%Location%%, %%Year%%. %%Misc%%.</div>'
+        }
+
+
+        var course_list = new cordpub.cordpub();
+        course_list.init(
+            '1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1233659110',
+            formats_courses,
+            false,
+            false,
+            false,
+            false,
+            "order by %%Year%% desc"
+        );
+
+        var formats_talks = {
+            "Talks": '<div class="row"><i>%%Title%%</i>, %%Venue%%, %%City%%, %%State%%, %%Month%% %%Year%%.</div>'
+        }
+
+
+        var course_list = new cordpub.cordpub();
+        course_list.init(
+            '1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1707613867',
+            formats_talks,
+            false,
+            false,
+            false,
+            false,
+            "order by %%Year%% desc, %%Month%% desc"
+        );
+
+        var formats_awards = {
+            "Award": '<div class="row">%%Award%%, %%Venue%%, %%Year%%. %%Misc%%</div>'
+        }
+
+
+        var awards_list = new cordpub.cordpub();
+        awards_list.init(
+            '1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1296285178',
+            formats_awards,
+            false,
+            false,
+            false,
+            false,
+            "order by %%Year%% desc"
+        );
+            </script>
+
+</body></html>
