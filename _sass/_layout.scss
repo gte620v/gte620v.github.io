@@ -45,7 +45,6 @@ a{
 
 
 #author_list, #chord_vis, #pub_list {
-    padding: 5px;
     clear: both;
     overflow: hidden;
     width: 700px;
@@ -70,7 +69,7 @@ a{
 .author_box {
     cursor: default;
     width: 120px;
-    padding: 0px 5px;
+    padding-right: 5px;
     float: left;
 }
 
@@ -101,11 +100,11 @@ a{
 .main {
     padding: 0 5px;
     float: right;
-    max-width: 650px;
     text-align: justify;
 }
 .main .left {
     float: left;
+    max-width: 650px;
 }
 .main .right {
     padding: 0 10px;
