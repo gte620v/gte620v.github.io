@@ -1,0 +1,17 @@
+/*
+Styling for tables.
+*/
+.div-table {
+    display: table;
+    width: auto;
+    border-spacing: 5px;
+}
+.row {
+    width: auto;
+    clear: both;
+    padding-left: 0.5em;
+    text-indent: -0.5em;
+}
+.col {
+    display: inline-block;
+}

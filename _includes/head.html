@@ -1,11 +1,14 @@
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}">
-
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>{{ site.title }}</title>
+        <meta name="description" content="{{ site.description }}" />
+        <meta name="keywords" content="{{ site.keywords }}" />
+        <meta name="author" content="{{ site.author }}" />
+    <script type="text/javascript" src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://www.google.com/jsapi" charset="utf-8"></script>
+    <script type="text/javascript" src="cordpub.js" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="https://jpswalsh.github.io/academicons/css/academicons.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href='favicon.ico' rel='icon' type='image/x-icon'/>
 </head>

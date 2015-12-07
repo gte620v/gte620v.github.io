@@ -1,8 +1,28 @@
+@mixin border-radius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+}
+
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
-    font: normal normal 14px'Trebuchet MS', Trebuchet, Verdana, sans-serif;
+    font: normal normal 15px'Trebuchet MS', Trebuchet, Verdana, sans-serif;
 }
 a {
-    color: #28B;
+    color: $accent-color;
+    text-decoration: none;
 }
 ul {
     padding: 0 0 0 0px;
@@ -10,108 +30,109 @@ ul {
 }
 .holder {
     margin: 0 auto;
-    width: 780px;
+    width: $full-width;
 }
+
+
 .header {
     padding: 0 10px 5px 5px;
     float: left;
-    max-width: 650px;
-}
-.header div {
-    width: 42px;
-    height: 42px;
-    line-height: 42px;
-    -moz-border-radius: 30%;
-    -webkit-border-radius: 30%;
-    border-radius: 30%;
-    float: left;
-    transition: 1s;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 22px;
-    margin: 0 2px;
-}
-.header div {
-    background: #ddd;
-    color: #ddd;
-}
-.header div:hover {
-    background: #000;
-    color: #000;
-}
-a{
-    text-decoration: none;
+    max-width: $main-width;
+    .top-box {
+        $box-width: ($main-width) / $boxes  - 5px;
+        width: $box-width;
+        height: $box-width;
+        @include border-radius(30%);
+        float: left;
+        transition: 1s;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 22px;
+        margin: 0 2px;
+        background: $grey;
+        color: $grey;
+    }
+    .top-box:hover {
+        background: #000;
+        color: #000;
+    }
+    a {
+        text-decoration: none;
+    }
 }
 
 
-#author_list, #chord_vis, #pub_list {
-    clear: both;
-    overflow: hidden;
-    width: 700px;
-}
-#chord_vis {
-    height: 500px;
-}
-
-#chart {
-    font: 10px sans-serif;
-    float: left;
-}
-.chord path {
-    fill-opacity: .67;
-    stroke: #000;
-    stroke-width: .5px;
-}
-.chord_labels, .tick_labels {
-    font-size: smaller;
-}
-
-.author_box {
-    cursor: default;
-    width: 120px;
-    padding-right: 5px;
-    float: left;
-}
-
-.bar {
-    float: left;
-    left: 15px;
-    width: 120px;
-    font-size: 18px;
-}
-.bar li {
-    line-height: 1.2;
-}
-.bar li:hover {
-}
-.right .icon {
-    padding: 0 2px;
-    font-size: 18px;
-    line-height: 1.2;
-}
-.bar .name {
-    padding: 0 2px;
-    font-size: 22px;
-    line-height: 1.2;
-}
-.selected {
-    background: #CCC;
-}
 .main {
     padding: 0 5px;
     float: right;
     text-align: justify;
+
+    .right {
+        padding: 0 10px;
+        float: right;
+        width: 160px;
+        text-align: right;
+        ul {
+            font-size: 14px;
+        }
+    }
+    .left {
+        float: left;
+        max-width: $main-width;
+
+        h2 {
+            padding-top: 15px;
+        }
+        h2:first-of-type {
+            padding-top: 0px;
+        }
+        h3 {
+            padding-top: 6px;
+        }
+        p {
+            padding-bottom: 8px;
+            text-indent: 1em;
+        }
+    }
 }
-.main .left {
+
+.left_nav_bar {
     float: left;
-    max-width: 650px;
+    left: 15px;
+    width: $left-width;
+    font-size: 18px;
+    .name {
+        padding: 0 2px;
+        font-size: 22px;
+        line-height: 1.2;
+    }
+    li {
+        line-height: 1.2;
+        margin: 2px;
+        padding: 0px 4px;
+        @include border-radius(4px);
+        transition: 0.2s;
+    }
+    .selected {
+        background: $grey;
+    }
+    li:hover {
+        background: $grey;
+    }
+    #head {
+        text-align: center;
+    }
 }
-.main .right {
-    padding: 0 10px;
-    float: right;
-    width: 165px;
-    text-align: right;
+
+.right .icon {
+    padding: 0 2px;
+    font-size: 18px;
+    line-height: 1.2;
+    color: black;
+    &:hover{
+        color: $accent-color;
+    }
 }
-.main .right ul {
-    font-size: 14px;
-}
+
+
+

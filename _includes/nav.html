@@ -1,0 +1,24 @@
+<div class="left_nav_bar">
+    <div id="head">
+        <img src="https://avatars3.githubusercontent.com/u/2158394?v=3&amp;s=110">
+    </div>
+    <ul>
+        <li class="selected">About</li>
+        <li>Students</li>
+        <li>Courses</li>
+        <li>Talks</li>
+        <li>Awards</li>
+        <li>Links</li>
+        <li>Publications</li>
+    </ul>
+</div>
+<div class="header">
+</div>
+<script type="text/javascript">
+d3.select(".header")
+.selectAll("div")
+.data(d3.range(14))
+.enter()
+.append("div")
+.attr("class", "top-box")
+</script>

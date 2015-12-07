@@ -1,0 +1,32 @@
+/*
+Styling for D3 elements.
+*/
+
+#author_list, #chord_vis, #pub_list {
+    clear: both;
+    overflow: hidden;
+    width: 700px;
+}
+#chord_vis {
+    height: 500px;
+}
+
+#chart {
+    font: 10px sans-serif;
+    float: left;
+}
+.chord path {
+    fill-opacity: .67;
+    stroke: #000;
+    stroke-width: .5px;
+}
+.chord_labels, .tick_labels {
+    font-size: smaller;
+}
+
+.author_box {
+    cursor: default;
+    width: 120px;
+    padding-right: 5px;
+    float: left;
+}
