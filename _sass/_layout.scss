@@ -1,22 +1,18 @@
 @mixin border-radius($radius) {
-  border-radius: $radius;
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  -o-border-radius: $radius;
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
 }
 
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
     margin: 0;
     padding: 0;
 }
-
-
 body {
     font: normal normal 15px'Trebuchet MS', Trebuchet, Verdana, sans-serif;
 }
@@ -32,14 +28,13 @@ ul {
     margin: 0 auto;
     width: $full-width;
 }
-
-
 .header {
     padding: 0 10px 5px 5px;
-    float: left;
+    float: right;
     max-width: $main-width;
+
     .top-box {
-        $box-width: ($main-width) / $boxes  - 5px;
+        $box-width: ($main-width) / $boxes  - 4px;
         width: $box-width;
         height: $box-width;
         @include border-radius(30%);
@@ -60,34 +55,36 @@ ul {
         text-decoration: none;
     }
 }
-
-
 .main {
     padding: 0 5px;
     float: right;
     text-align: justify;
+    section {
+        float: left;
+    }
 
     .right {
         padding: 0 10px;
         float: right;
         width: 160px;
         text-align: right;
+
         ul {
             font-size: 14px;
         }
     }
     .left {
+        .one {
+            padding-top: 5px;
+        }
         float: left;
         max-width: $main-width;
 
         h2 {
-            padding-top: 15px;
-        }
-        h2:first-of-type {
-            padding-top: 0px;
+            padding-top: 25px;
         }
         h3 {
-            padding-top: 6px;
+            padding-top: 10px;
         }
         p {
             padding-bottom: 8px;
@@ -95,12 +92,10 @@ ul {
         }
     }
 }
-
 .left_nav_bar {
-    float: left;
-    left: 15px;
-    width: $left-width;
+    position: fixed;
     font-size: 18px;
+
     .name {
         padding: 0 2px;
         font-size: 22px;
@@ -112,8 +107,9 @@ ul {
         padding: 0px 4px;
         @include border-radius(4px);
         transition: 0.2s;
+        color: $accent-color;
     }
-    .selected {
+    .active {
         background: $grey;
     }
     li:hover {
@@ -123,16 +119,13 @@ ul {
         text-align: center;
     }
 }
-
 .right .icon {
     padding: 0 2px;
     font-size: 18px;
     line-height: 1.2;
     color: black;
-    &:hover{
+
+    &:hover {
         color: $accent-color;
     }
 }
-
-
-

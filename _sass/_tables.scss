@@ -12,6 +12,22 @@ Styling for tables.
     padding-left: 0.5em;
     text-indent: -0.5em;
 }
+.row-pub {
+  display:table-row;
+  width:auto;
+  clear:both;
+}
+.citation{
+  width: $main-width - 50px;
+  vertical-align: top;
+}
+.type_count{
+  width: 40px;
+}
+
+.citation_block{
+    clear:both;
+}
 .col {
     display: inline-block;
 }

@@ -1,3 +1,4 @@
+<section  data-scroll-index="6">
 <h2>Publications</h2>
 <div id="chord_vis"></div>
 <div id="author_list"></div>
@@ -5,12 +6,13 @@
 <div id="Conference" class="citation_block"></div>
 <div id="Patent" class="citation_block"></div>
 <div id="Thesis" class="citation_block"></div>
+</section>
 <script type="text/javascript">
 var formats = {
-"Patent": '<div class="row"><div class="type_count col">[P%%Counter%%]</div><div class="citation col">%%Authors%%, %%Title%%, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>',
-"Conference": '<div class="row"><div class="type_count col">[C%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," in <i>Proc. %%Venue%%</i>, pp. %%Pages%%, %%Location%%, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
-"Journal": '<div class="row"><div class="type_count col">[J%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," <i>%%Venue%%</i>, vol. %%Volume%%, no. %%Number%%, pp. %%Pages%%, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
-"Thesis": '<div class="row"><div class="type_count col">[T%%Counter%%]</div><div class="citation col">%%Authors%%, <i>%%Title%%</i>, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>'
+"Patent": '<div class="row-pub"><div class="type_count col">[P%%Counter%%]</div><div class="citation col">%%Authors%%, %%Title%%, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>',
+"Conference": '<div class="row-pub"><div class="type_count col">[C%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," in <i>Proc. %%Venue%%</i>, pp. %%Pages%%, %%Location%%, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
+"Journal": '<div class="row-pub"><div class="type_count col">[J%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," <i>%%Venue%%</i>, vol. %%Volume%%, no. %%Number%%, pp. %%Pages%%, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
+"Thesis": '<div class="row-pub"><div class="type_count col">[T%%Counter%%]</div><div class="citation col">%%Authors%%, <i>%%Title%%</i>, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>'
 };
 var cord = new cordpub.cordpub();
 cord.init(
