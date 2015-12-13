@@ -95,7 +95,7 @@ ul {
 .left_nav_bar {
     position: fixed;
     font-size: 18px;
-
+    width: $left-width;
     .name {
         padding: 0 2px;
         font-size: 22px;
@@ -108,6 +108,7 @@ ul {
         @include border-radius(4px);
         transition: 0.2s;
         color: $accent-color;
+        cursor: pointer;
     }
     .active {
         background: $grey;
