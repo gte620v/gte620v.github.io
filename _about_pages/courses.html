@@ -15,14 +15,9 @@ var formats_courses = {
 "Academic": '<div class="row">%%Title%%, %%Term%% %%Year%%.</div>',
 "Tutorial": '<div class="row"><i>%%Title%%</i>, %%Venue%%, %%Location%%, %%Year%%. %%Misc%%.</div>'
 }
-var course_list = new cordpub.cordpub();
-course_list.init(
-'1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1233659110',
-formats_courses,
-false,
-false,
-false,
-false,
-"order by %%Year%% desc"
-);
+var course_list = new cordpub.cordpub({
+key: '1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1233659110',
+formats: formats_courses,
+sort_clause: "order by %%Year%% desc"});
+course_list.init();
 </script>

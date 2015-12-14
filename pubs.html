@@ -54,14 +54,14 @@ var formats = {
 "Journal": '<div class="row-pub"><div class="type_count col">[J%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," <i>%%Venue%%</i>, vol. %%Volume%%, no. %%Number%%, pp. %%Pages%%, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
 "Thesis": '<div class="row-pub"><div class="type_count col">[T%%Counter%%]</div><div class="citation col">%%Authors%%, <i>%%Title%%</i>, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>'
 };
-var cord = new cordpub.cordpub();
-cord.init(
-'1hkE7P_fHrtiIFAx53xDyUl3gNOp4MSIYLrEwZIJWcaw',
-formats,
-"author_list",
-"chord_vis",
-d3.scale.category20c(),
-true,
-"order by %%Year%% asc, %%Month%% asc"
-);
+var cord = new cordpub.cordpub({
+            "key":'1hkE7P_fHrtiIFAx53xDyUl3gNOp4MSIYLrEwZIJWcaw',
+            "formats": formats,
+            "author_list_div": "author_list",
+            "cord_plot_div": "chord_vis",
+            "colorRange": d3.scale.category20c(),
+            "print_headers": true,
+            "sort_clause": "order by %%Year%% asc, %%Month%% asc"
+        });
+cord.init();
 </script>

@@ -11,14 +11,10 @@ order: 10
 var formats_awards = {
 "Award": '<div class="row">%%Award%%, %%Venue%%, %%Year%%. %%Misc%%</div>'
 }
-var awards_list = new cordpub.cordpub();
-awards_list.init(
-'1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1296285178',
-formats_awards,
-false,
-false,
-false,
-false,
-"order by %%Year%% desc"
-);
+var awards_list = new cordpub.cordpub({
+key: '1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1296285178',
+formats: formats_awards,
+sort_clause: "order by %%Year%% desc"});
+
+awards_list.init();
 </script>
