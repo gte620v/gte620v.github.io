@@ -7,8 +7,8 @@ layout: default
     </div>
     <ul>
 
-        <li><a href="index.html">CV</a></li>
-        {% assign nav_count = 0 %}
+        <li data-scroll-nav="0">CV</li>
+        {% assign nav_count = 1 %}
           {% assign sorted_pages = site.about_pages | sort:"order" %}
           {% for node in sorted_pages %}
             {% if node.published %}
@@ -24,7 +24,7 @@ layout: default
 </div>
   <div class="main">
     <div class="left">
-      {% assign section_count = 0 %}
+      {% assign section_count = 1 %}
       {% assign sorted_pages = site.about_pages | sort:"order" %}
       {% for node in sorted_pages %}
         {% if node.published %}
@@ -37,6 +37,7 @@ layout: default
       {% endfor %}
     </div>
   </div>
+
 <script type="text/javascript">
 $(function(){
 $.scrollIt();
