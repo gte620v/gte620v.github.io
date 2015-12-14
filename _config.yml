@@ -1,9 +1,11 @@
+
+
+
 # Site settings
 title: Bob Baxley
 email: bob@rjbaxley.com
 author: Bob Baxley
-description: > # this means to ignore newlines until "baseurl:"
-  Bob Baxley
+description: Bob Baxley
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://rjbaxley.com" # the base hostname & protocol for your site
 twitter_username: Bob_Baxley
@@ -11,3 +13,8 @@ github_username:  gte620v
 
 # Build settings
 markdown: kramdown
+
+collections:
+  about_pages:
+    output: false
+

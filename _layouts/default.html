@@ -1,27 +1,9 @@
 <html>
     {% include head.html %}
-    <body>
-      <div class="holder">
-        <a href="#0"></a>
-        {% include nav.html %}
-        <div class="main">
-            <div class="left">
-                {% include about/about.html %}
-                {% include about/students.html %}
-                {% include about/courses.html %}
-                {% include about/talks.html %}
-                {% include about/awards.html %}
-                {% include about/links.html %}
-                {% include about/pubs.html %}
-
-            <div>
-        </div>
-      </div>
-
-<script type="text/javascript">
-      $(function(){
-  $.scrollIt();
-});
-</script>
+    <body><div class="holder">
+  <a href="#0"></a>
+    {% include header.html %}
+    {{content}}
+    </div>
     </body>
 </html>
