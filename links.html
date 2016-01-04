@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+<div class="left_nav_bar">
+    <div id="head">
+        <img src="https://avatars3.githubusercontent.com/u/2158394?v=3&amp;s=110">
+    </div>
+    <ul>
+
+        <li><a href="index.html">CV</a></li>
+        <li><a href="pubs.html">Publications</a></li>
+        <li class="active"><a href="links.html">Links</a></li>
+        <li><a href="blog.html">Posts</a></li>
+    </ul>
+
+
+
+</div>
+<div class="main">
+    <div class="left">
+        <div id="Tools" class="links_group"></div>
+        <div id="Python_Tools" class="links_group"></div>
+        <div id="Machine_Learning" class="links_group"></div>
+        <div id="Academic_Resources" class="links_group"></div>
+        <div id="Free_Books" class="links_group"></div>
+        <div id="SDR" class="links_group"></div>
+        <div id="Societies" class="links_group"></div>
+
+    </div>
+</div>
+<script type="text/javascript">
+var formats = {
+"Academic_Resources": '<a href="%%href%%"> %%Title%% </a>',
+"Tools": '<a href="%%href%%"> %%Title%% </a>',
+"Python_Tools": '<a href="%%href%%"> %%Title%% </a>',
+"Machine_Learning": '<a href="%%href%%"> %%Title%% </a>',
+"Free_Books": '<a href="%%href%%"> %%Title%% </a>',
+"SDR": '<a href="%%href%%"> %%Title%% </a>',
+"Societies": '<a href="%%href%%"> %%Title%% </a>'
+};
+
+var cord = new cordpub.cordpub({
+            "key":'1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=1552724282',
+            "formats": formats,
+            "print_headers": true,
+            "sort_clause": "order by %%Title%%"
+        });
+cord.init();
+
+
+</script>
+

@@ -18,6 +18,7 @@ layout: default
         </li>
         <li data-scroll-nav="4">&nbsp;Book Chapter
         </li>
+        <li><a href="links.html">Links</a></li>
         <li><a href="blog.html">Posts</a></li>
     </ul>
 </div>
@@ -55,12 +56,15 @@ $.scrollIt();
 </script>
 <script type="text/javascript">
 var formats = {
-"Patent": '<div class="row-pub"><div class="type_count col">[P%%Counter%%]</div><div class="citation col">%%Authors%%, %%Title%%, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>',
-"Conference": '<div class="row-pub"><div class="type_count col">[C%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," in <i>Proc. %%Venue%%</i>, %%Location%%, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
-"Journal": '<div class="row-pub"><div class="type_count col">[J%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," <i>%%Venue%%</i>, %%Month%% %%Year%%.<br>[<a href="https://scholar.google.com/scholar?cites=%%Google_ID%%">cites</a>]</div></div>',
+"Patent": '<div class="row-pub"><div class="type_count col">[P%%Counter%%]</div><div class="citation col">%%Authors%%, %%Title%%, %%Misc_Description%%, %%Month%% %%Year%%.<br><span class="pdf" link="%%pdf%%"></span> <span class="link" link="%%Link%%"></span> <span class="cites" link="%%Google_ID%%"></span></div></div>',
+"Conference": '<div class="row-pub"><div class="type_count col">[C%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," in <i>Proc. %%Venue%%</i>, %%Location%%, %%Month%% %%Year%%.<br><span class="pdf" link="%%pdf%%"></span> <span class="cites" link="%%Google_ID%%"></span></div></div>',
+"Journal": '<div class="row-pub"><div class="type_count col">[J%%Counter%%]</div><div class="citation col">%%Authors%%, "%%Title%%," <i>%%Venue%%</i>, %%Month%% %%Year%%.<br><span class="pdf" link="%%pdf%%"></span> <span class="cites" link="%%Google_ID%%"></span></div></div>',
 "Thesis": '<div class="row-pub"><div class="type_count col">[T%%Counter%%]</div><div class="citation col">%%Authors%%, <i>%%Title%%</i>, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>',
 "Book_Chapter": '<div class="row-pub"><div class="type_count col">[T%%Counter%%]</div><div class="citation col">%%Authors%%, <i>%%Title%%</i>, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>'
 };
+
+
+
 var cord = new cordpub.cordpub({
             "key":'1QdKhXtFd-8GEcvX52PuM4zlAckenq999Nvs3iEUkRVc&gid=405757059',
             "formats": formats,
@@ -71,4 +75,7 @@ var cord = new cordpub.cordpub({
             "sort_clause": "order by %%Year%% desc, %%Month%% desc"
         });
 cord.init();
+
+
+
 </script>
