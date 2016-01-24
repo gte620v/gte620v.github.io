@@ -63,6 +63,31 @@ var formats = {
 "Book_Chapter": '<div class="row-pub"><div class="type_count col">[T%%Counter%%]</div><div class="citation col">%%Authors%%, <i>%%Title%%</i>, %%Misc_Description%%, %%Month%% %%Year%%.</div></div>'
 };
 
+function remove_empties() {
+        d3
+        .selectAll(".cites")
+        .filter(function(d,i){return this.attributes.link.value.length>0;})
+        .html(function(d,i){
+            var gid = this.attributes.link.value
+            return cite_string.replace("%%Google_ID%%",gid);
+        });
+
+        d3
+        .selectAll(".pdf")
+        .filter(function(d,i){return this.attributes.link.value.length>0;})
+        .html(function(d,i){
+            var gid = this.attributes.link.value
+            return pdf_string.replace("%%pdf%%",gid);
+        });
+
+        d3
+        .selectAll(".link")
+        .filter(function(d,i){return this.attributes.link.value.length>0;})
+        .html(function(d,i){
+            var gid = this.attributes.link.value
+            return link_string.replace("%%Link%%",gid);
+        });
+    }
 
 
 var cord = new cordpub.cordpub({
@@ -72,7 +97,8 @@ var cord = new cordpub.cordpub({
             "cord_plot_div": "chord_vis",
             "colorRange": d3.scale.category20c(),
             "print_headers": true,
-            "sort_clause": "order by %%Year%% desc, %%Month%% desc"
+            "sort_clause": "order by %%Year%% desc, %%Month%% desc",
+            "render_callback": remove_empties
         });
 cord.init();
 
