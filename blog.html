@@ -6,19 +6,41 @@ layout: default
         <img src="https://avatars3.githubusercontent.com/u/2158394?v=3&amp;s=110">
     </div>
     <ul>
-
         <li><a href="index.html">CV</a></li>
         <li><a href="pubs.html">Publications</a></li>
         <li><a href="links.html">Links</a></li>
         <li><a href="blog.html">Posts</a></li>
+        {% assign nav_count = 1 %}
+        {% assign sorted_pages = site.posts | sort:"order" %}
+        {% for node in sorted_pages %}
+            {% if node.published %}
+                <li data-scroll-nav="{{nav_count}}" class="blog">&nbsp;{{node.title}}
+                </li>
+                {% assign nav_count = 1| plus:nav_count %}
+            {% endif %}
+        {% endfor %}
     </ul>
-
 </div>
-  <div class="main">
+<div class="main">
     <div class="left">
-    <section>
-      Yo
-
-    </section>
+        {% assign section_count = 1 %}
+        {% assign sorted_pages = site.posts | sort:"order" %}
+        {% for node in sorted_pages %}
+            {% if node.published %}
+                <section  data-scroll-index="{{section_count}}">
+                    <a name="{{section_count}}"></a>
+                    <br>
+                    <h1>{{ node.title }}</h1>
+                    {{node.content}}
+                </section>
+                <hr>
+                {% assign section_count = 1| plus:section_count %}
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
+<script type="text/javascript">
+$(function(){
+$.scrollIt();
+});
+</script>
