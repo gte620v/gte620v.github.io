@@ -122,15 +122,23 @@ ul {
     li:hover {
         background: $grey;
     }
-    #head {
-        text-align: center;
+    #head, h3, h4 {
+        text-align: left;
+        padding-bottom: 8px;
+    }
+    .email {
+        font-size: 14px;
+
     }
 }
-.right .icon {
+
+
+.icon {
     padding: 0 2px;
     font-size: 18px;
     line-height: 1.2;
     color: black;
+    padding-top: 8px;
 
     &:hover {
         color: $accent-color;
