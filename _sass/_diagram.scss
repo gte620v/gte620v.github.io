@@ -7,11 +7,13 @@ Styling for D3 elements.
     overflow: hidden;
     width: 700px;
 }
-#author_list{
-    float:right;
+
+#author_list {
+    padding-top: 15px;
 }
 
 #chord_vis {
+    margin-left: -50px;
     height: 500px;
 }
 

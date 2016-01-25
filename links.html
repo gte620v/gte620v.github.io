@@ -3,28 +3,28 @@ layout: default
 ---
 
 <div class="left_nav_bar">
-    <div id="head">
-        <img src="https://avatars3.githubusercontent.com/u/2158394?v=3&amp;s=110">
-    </div>
+    {% include icons.html %}
     <ul>
 
-        <li><a href="index.html">CV</a></li>
+        <li ><a href="index.html">About</a></li>
+        <li><a href="cv.html">CV</a></li>
         <li><a href="pubs.html">Publications</a></li>
         <li class="active"><a href="links.html">Links</a></li>
         <li><a href="blog.html">Posts</a></li>
     </ul>
 
+<br>
 
 
 </div>
 <div class="main">
     <div class="left">
-        <div id="Tools" class="links_group"></div>
         <div id="Python_Tools" class="links_group"></div>
+        <div id="Tools" class="links_group"></div>
         <div id="Machine_Learning" class="links_group"></div>
         <div id="Academic_Resources" class="links_group"></div>
-        <div id="Free_Books" class="links_group"></div>
         <div id="SDR" class="links_group"></div>
+        <div id="Free_Books" class="links_group"></div>
         <div id="Societies" class="links_group"></div>
 
     </div>
@@ -50,4 +50,7 @@ cord.init();
 
 
 </script>
+
+
+    {% include foot.html %}
 

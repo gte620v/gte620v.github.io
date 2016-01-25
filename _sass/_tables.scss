@@ -2,38 +2,46 @@
 Styling for tables.
 */
 .div-table {
-    display: table;
-    width: auto;
-    border-spacing: 5px;
+  display: table;
+  width: auto;
+  border-spacing: 5px;
+}
+.links_group > .div-table {
+  border-spacing: 0px !important;
+
+  a {
+    color: black;
+
+    &:hover {
+      color: $accent-color;
+    }
+  }
 }
 .row {
-    width: auto;
-    clear: both;
-    padding-left: 0.5em;
-    text-indent: -0.5em;
+  width: auto;
+  clear: both;
+  padding-left: 0.5em;
+  text-indent: -0.5em;
 }
 .row-pub {
-  display:table-row;
-  width:auto;
-  clear:both;
+  display: table-row;
+  width: auto;
+  clear: both;
 }
-.citation{
+.citation {
   width: $main-width - 50px;
   vertical-align: top;
 }
-.type_count{
+.type_count {
   width: 40px;
 }
-
-.citation_block{
-    clear:both;
+.citation_block {
+  clear: both;
 }
 .col {
-    display: inline-block;
+  display: inline-block;
 }
-
 .links_group {
-  float:left;
+  float: left;
   padding-right: 30px;
 }
-

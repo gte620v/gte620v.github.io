@@ -1,0 +1,17 @@
+
+<script type="text/javascript">
+$(function(){
+$.scrollIt();
+});
+</script>
+<div class="foot">
+</div>
+<script type="text/javascript">
+d3.select(".foot")
+.selectAll("div")
+.data(d3.range(14))
+.enter()
+.append("div")
+.attr("class", "top-box")
+
+</script>

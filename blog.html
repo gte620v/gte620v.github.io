@@ -2,11 +2,10 @@
 layout: default
 ---
 <div class="left_nav_bar">
-    <div id="head">
-        <img src="https://avatars3.githubusercontent.com/u/2158394?v=3&amp;s=110">
-    </div>
+    {% include icons.html %}
     <ul>
-        <li><a href="index.html">CV</a></li>
+        <li ><a href="index.html">About</a></li>
+        <li><a href="cv.html">CV</a></li>
         <li><a href="pubs.html">Publications</a></li>
         <li><a href="links.html">Links</a></li>
         <li><a href="blog.html">Posts</a></li>
@@ -30,7 +29,8 @@ layout: default
                 <section  data-scroll-index="{{section_count}}">
                     <a name="{{section_count}}"></a>
                     <br>
-                    <h1>{{ node.title }}</h1>
+                    <h2>{{ node.title }}</h2>
+                    <br>
                     {{node.content}}
                 </section>
                 <hr>
@@ -39,8 +39,6 @@ layout: default
         {% endfor %}
     </div>
 </div>
-<script type="text/javascript">
-$(function(){
-$.scrollIt();
-});
-</script>
+
+
+    {% include foot.html %}
