@@ -51,6 +51,8 @@
                 scrollTop: targetTop,
                 easing: settings.easing
             }, settings.scrollTime);
+
+            history.pushState(null, null, '#'+ndx);
         };
 
         /**
@@ -110,9 +112,7 @@
                 winTop < $(div).offset().top + (settings.topOffset) + $(div).outerHeight()
             });
             var newActive = visible.first().attr('data-scroll-index');
-            if (newActive >= 0 ) {
-                history.pushState(null, null, '#'+newActive);
-            }
+
             updateActive(newActive);
         };
 
