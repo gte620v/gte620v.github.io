@@ -11,7 +11,7 @@ layout: default
     {% assign sorted_pages = site.about_pages | sort:"order" %}
     {% for node in sorted_pages %}
       {% if node.published %}
-        <li data-scroll-nav="{{nav_count}}">&nbsp;{{node.title}}
+        <li data-scroll-nav="{{nav_count}}" class="blog">&nbsp;{{node.title}}
         </li>
         {% assign nav_count = 1| plus:nav_count %}
       {% endif %}
