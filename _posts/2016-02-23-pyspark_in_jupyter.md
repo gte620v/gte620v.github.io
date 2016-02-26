@@ -60,7 +60,7 @@ The output should be `3`.
 
 ### Hooking up AWS
 
-With pyspark running, the next step is to get the S3 parquet data in to pandas wdataframes:
+With pyspark running, the next step is to get the S3 parquet data in to pandas dataframes:
 
 {% highlight python %}
 from pyspark.sql import SQLContext
@@ -83,9 +83,9 @@ There are all kinds of cludgy ways to add your AWS keys to your system.  But if 
 hadoop fs -ls s3n://bucket/data/year=2015/month=10/
 {% endhighlight %}
 
-If that works, you shouldn't have to do anything other than adding `HADOOP_CONF_DIR` to your path.  If that doesn't work for you, you need to setup `core-sites.xml` by following the directions at http://stackoverflow.com/questions/28029134/how-can-i-access-s3-s3n-from-a-local-hadoop-2-6-installation.  
+If that works, you only have to add `HADOOP_CONF_DIR` to your path.  If you cen't get to s3 from hadoop, you need to setup `core-sites.xml` by following the directions [here](http://stackoverflow.com/questions/28029134/how-can-i-access-s3-s3n-from-a-local-hadoop-2-6-installation).  
 
-Once Hadoop is working, you should only have to add the following line to `~/.bash_profile` (OSX) or `~/.bashrc` (linux) in order to use s3 paths in pyspark:
+Once Hadoop is working, the final step is to add the following line to `~/.bash_profile` (OSX) or `~/.bashrc` (linux) in order to use s3 paths in pyspark:
 
 {% highlight bash %}
 export HADOOP_CONF_DIR=$HADOOP_HOME/etc/hadoop
