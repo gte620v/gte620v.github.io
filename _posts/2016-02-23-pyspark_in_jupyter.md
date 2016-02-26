@@ -12,7 +12,7 @@ published: true
 
 
 ### PySpark ETL
-I have been using [PySpark](https://spark.apache.org/) recently do quickly munge data.  My workflow involves taking lots of json data from S3, transforming it, filtering it, then post processing the filtered output.  At [Spark Summit East](https://spark-summit.org/east-2016/schedule/?utm_campaign=Spark+Summit+East+2016), I got turned on to using parquet files as a way to store the intermediate output of my ETL process.  
+I have been using [PySpark](https://spark.apache.org/) recently to quickly munge data.  My workflow involves taking lots of json data from S3, transforming it, filtering it, then post processing the filtered output.  At [Spark Summit East](https://spark-summit.org/east-2016/schedule/?utm_campaign=Spark+Summit+East+2016), I got turned on to using parquet files as a way to store the intermediate output of my ETL process.  
 
 A sketch of the code looks something like this:
 
