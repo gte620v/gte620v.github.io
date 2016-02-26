@@ -9,10 +9,10 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, figure {
     margin: 0;
     padding: 0;
-            font-weight: normal;
+    font-weight: normal;
 }
 body {
     font: normal normal 15px 'Trebuchet MS', Trebuchet, Verdana, sans-serif;
@@ -21,15 +21,11 @@ a {
     color: $accent-color;
     text-decoration: none;
 }
-ul {
-    padding: 0 0 0 0px;
-    list-style: none;
-}
 .holder {
     margin: 0 auto;
     width: $full-width;
 }
-.header,.foot {
+.header, .foot {
     padding: 0 10px 5px 5px;
     float: right;
     max-width: $main-width;
@@ -59,15 +55,14 @@ ul {
 .foot {
     padding-top: 50px;
 }
-
 .main {
     padding: 0 5px;
     float: right;
     text-align: justify;
+
     section {
         float: left;
     }
-
     .right {
         padding: 0 10px;
         float: right;
@@ -78,7 +73,10 @@ ul {
             font-size: 14px;
         }
     }
-    .left {
+    .left, section {
+        ul {
+            margin: 5px 0px 5px 0px;     /*list-style: none;*/
+        }
         .one {
             padding-top: 5px;
         }
@@ -86,7 +84,8 @@ ul {
         width: $main-width;
 
         h2, .key-header {
-            text-transform: lowercase;
+
+            /*text-transform: lowercase;*/
             padding-top: 25px;
             font-weight: normal;
             font-style: italic;
@@ -94,15 +93,16 @@ ul {
         }
         .key-header {
             display: block;
-            font-size: 1.5em;
-            /*font-weight: bold;*/
+            font-size: 1.5em;            /*font-weight: bold;*/
         }
         h3 {
-            text-transform: lowercase;
+
+            /*text-transform: lowercase;*/
             padding-top: 10px;
             font-weight: normal;
             font-style: italic;
             color: $accent-color;
+            margin-bottom: 5px;
         }
         p {
             padding-bottom: 8px;
@@ -114,14 +114,21 @@ ul {
     position: fixed;
     font-size: 18px;
     width: $left-width;
+
     .name {
         padding: 0 2px;
         font-size: 22px;
         line-height: 1.2;
     }
+    ul {
+        list-style: none;
+        padding: 0 0 0 0px;
+    }
     li {
-        text-transform: lowercase;
+
+        /*text-transform: lowercase;*/
         line-height: 1.3;
+        padding: 0;
         padding-left: 0px;
         padding-right: 4px;
         @include border-radius(4px);
@@ -129,6 +136,7 @@ ul {
         color: $accent-color;
         cursor: pointer;
         width: $highlight-width;
+        margin: 0;
     }
     .active {
         background: $grey;
@@ -146,11 +154,8 @@ ul {
     }
     .blog {
         font-size: 14px;
-
     }
 }
-
-
 .icon {
     padding-top: 8px;
     font-size: 16px;
@@ -160,7 +165,6 @@ ul {
         color: $accent-color;
     }
 }
-
 .footer {
     height: 150px;
     width: 100%;

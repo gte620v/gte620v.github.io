@@ -4,11 +4,11 @@ layout: default
 <div class="left_nav_bar">
     {% include icons.html %}
     <ul>
-        <li ><a href="{{ site.url }}/index.html">About</a></li>
-        <li><a href="{{ site.url }}/cv.html">CV</a></li>
-        <li><a href="{{ site.url }}/pubs.html">Publications</a></li>
-        <li><a href="{{ site.url }}/links.html">Links</a></li>
-        <li><a href="{{ site.url }}/blog.html">Posts</a></li>
+        <li ><a href="{{ site.baseurl }}/index.html">About</a></li>
+        <li><a href="{{ site.baseurl }}/cv.html">CV</a></li>
+        <li><a href="{{ site.baseurl }}/pubs.html">Publications</a></li>
+        <li><a href="{{ site.baseurl }}/links.html">Links</a></li>
+        <li><a href="{{ site.baseurl }}/blog.html">Posts</a></li>
         {% assign nav_count = 1 %}
         {% assign sorted_pages = site.posts | sort:"order" %}
         {% for node in sorted_pages %}
@@ -23,6 +23,7 @@ layout: default
 <div class="main">
     <div class="left">
 {{ content }}
+<br><br>
     </div>
 </div>
 
