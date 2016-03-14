@@ -12,7 +12,7 @@ published: true
 
 ### Parallel Execution Options
 
-Distributing jobs over multiple cores/machines is a commonly encountered need when working with even moderately large datasets.  In fact, the whole big data ecosystem sprouted around this need with tools like Hadoop and Spark, which allow you to parallelize a job over clusters of computers.
+Distributing jobs over multiple cores/machines is a commonly encountered need when working with even moderately large datasets.  In fact, the whole big data ecosystem sprouted around this need.
 
 If we don't need the power of a distributing a job over multiple machines and can instead get away with simply using multiple cores on one machine, then we can use something like Python's multithreading and multiprocessing modules.  Both of these modules require a fair amount of boilerplate code to even do simple things.  As an alternative, below I show examples in two tools that are relatively new to me: [Luigi](https://github.com/spotify/luigi) and [GNU Parallel](http://www.gnu.org/software/parallel/).  
 
