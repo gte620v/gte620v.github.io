@@ -12,15 +12,11 @@ published: true
 
 ### Parallel Execution Options
 
-Distributing jobs over multiple cores/machines is a commonly encountered need with working with even moderately large datasets.  In fact, the whole big data ecosystem sprouted around this need with tools like Hadoop and Spark, which allow you to parallelize a job over clusters of computers.
+Distributing jobs over multiple cores/machines is a commonly encountered need when working with even moderately large datasets.  In fact, the whole big data ecosystem sprouted around this need with tools like Hadoop and Spark, which allow you to parallelize a job over clusters of computers.
 
-If we don't need the power of a distributing a job over multiple machines and can instead get away with simply using multiple cores on one machine, then we can use something like Python's multithreading and multiprocessing modules.  Both of these modules require a far amount of boilerplate code to even do simple things.  As an alternative, below I illustrate two tools that are relatively new to me: Luigi and GNU Parallel.  
+If we don't need the power of a distributing a job over multiple machines and can instead get away with simply using multiple cores on one machine, then we can use something like Python's multithreading and multiprocessing modules.  Both of these modules require a fair amount of boilerplate code to even do simple things.  As an alternative, below I show examples in two tools that are relatively new to me: [Luigi](https://github.com/spotify/luigi) and [GNU Parallel](http://www.gnu.org/software/parallel/).  
 
-### GNU Parallel
-Before coming across [Luigi](https://github.com/spotify/luigi), I was parallelizing job using [GNU Parallel](http://www.gnu.org/software/parallel/), which is very easy to use.  A use case of Parallel is to process a large file or many files with a mapper that takes a line in and returns a value that only depends on that line.  GNU Parallel spins up an instance of the mapper per core and takes care of partitioning the input file(s) across the jobs.  We can also provide GNU Parallel with a list of remote machines and GNU Parallel will parse out the jobs across the machines. 
-
-A simple use case might be that we have hundreds of csv log files and we need to map and filter out only lines of the log files that meet a certain criteria.  
-If you need to do something more versatile than maps and filters, or you want to have a degree of error recovery for subsets of the job that might go bad, GNU Parallel is not the best option.  Instead [Hadoop](http://hadoop.apache.org/) or [Spark](https://spark.apache.org/) are the tools to use.  In addition to these tools, we can layer on a pipeline management functionality with Luigi to further robustify the process.
+A simple use case might be that we have hundreds of csv log files and we need to map and filter out only lines of the log files that meet a certain criteria.  If you need to do something more versatile than maps and filters, or you want to have a degree of error recovery for subsets of the job that might go bad, GNU Parallel is not the best option.  Instead [Hadoop](http://hadoop.apache.org/) or [Spark](https://spark.apache.org/) are the tools to use. 
 
 
 ### Example
@@ -68,6 +64,8 @@ real    0m19.012s
 {% endhighlight %}
 
 ### GNU Parallel
+A use case of GNU Parallel is to process a large file or many files with a mapper that takes a line in and returns a value that only depends on that line.  GNU Parallel spins up an instance of the mapper per core and takes care of partitioning the input file(s) across the jobs.  We can also provide GNU Parallel with a list of remote machines and GNU Parallel will parse out the jobs across the machines. 
+
 My Macbook has 4 cores and this operation of filtering json rows is well-suited to GNU Parallel, so let's see how fast it runs.
 
 {% highlight bash %}
