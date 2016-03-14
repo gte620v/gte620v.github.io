@@ -33,7 +33,7 @@ $ head data/dat_0.json
 {"index": 0.93088240523834043, "total": 0.6347448072197811}
 {% endhighlight %}
 
-I want to find all rows where the sum of `index` and `total` is greater than `1.99`.  The following bit of python code (`json_mapper.py`) takes input on stdin and print them to stdout.  
+I want to find all rows where the sum of `index` and `total` is greater than `1.99`.  The following bit of python code (`json_mapper.py`) takes input on stdin and prints the jsons that pass our criteria to stdout.  
 
 {% highlight python %}
 import json
