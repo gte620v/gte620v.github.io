@@ -64,7 +64,7 @@ real    0m19.012s
 {% endhighlight %}
 
 ### GNU Parallel
-A use case of GNU Parallel is to process a large file or many files with a mapper that takes a line in and returns a value that only depends on that line.  GNU Parallel spins up an instance of the mapper per core and takes care of partitioning the input file(s) across the jobs.  We can also provide GNU Parallel with a list of remote machines and GNU Parallel will parse out the jobs across the machines. 
+A use case of GNU Parallel is to process a large file or many files with a mapper that takes a line in and returns a value that only depends on that line.  GNU Parallel spins up an instance of the mapper per core and takes care of partitioning the input file(s) across the jobs.  We can also provide GNU Parallel with a list of remote machines and GNU Parallel will divvy out the jobs across the machines. 
 
 My Macbook has 4 cores and this operation of filtering json rows is well-suited to GNU Parallel, so let's see how fast it runs.
 
@@ -80,7 +80,7 @@ It is only slightly faster, which is a bit surprising.  For bigger jobs, I have 
 ![image]({{site.baseurl}}/images/pegged_cores.png){:width="330px"}
 
 ### JQ
-A year ago I was on a command-line kick and a friend suggested that I give [jq](https://stedolan.github.io/jq/manual/) a try.  It is an analog to `sed`, `awk`, and `grep`, but is made specifically for processing and manipulating json files.  Like those other GNU Linux CLI tools, jq has its own quirky syntax, that is initially intimidating, but is not hard to get the hang of.  Specifically, we can replicate the functionality of out `map_line` function with the following bit of jq that we can in a file called `map.jq`.
+A year ago I was on a command-line kick and a friend suggested that I give [jq](https://stedolan.github.io/jq/manual/) a try.  It is an analog to `sed`, `awk`, and `grep`, but is made specifically for processing and manipulating json files.  Like those other GNU Linux CLI tools, jq has its own quirky syntax, that is initially intimidating, but is not hard to get the hang of.  Specifically, we can replicate the functionality of out `map_line` function with the following bit of jq that we keep in a file called `map.jq`.
 
 {% highlight bash %}
 (.index+.total) as $sum_val
@@ -138,7 +138,7 @@ We can see the progress in Spark's web interface at `http://0.0.0.0:4040`.  It l
 
 
 ### Multiple Workers in Luigi
-Luigi is a ETL pipeline scheduler that Spotify open sourced in 2012. Luigi's main use case is not parallel execution, but it is a nice feature that I thought I'd highlight here today.  Below is a bit of code that defines two Luigi tasks.  The `TestTask` class executes the mapper for one file and the `LotsOTasks` class loops through all 4 files and runs `TestTask` for each file.
+Luigi is a ETL pipeline scheduler that Spotify open sourced in 2012. Parallel execution is not Luigi's main use case, but it is a nice feature that I thought I'd highlight here today.  Below is a bit of code that defines two Luigi tasks.  The `TestTask` class executes the mapper for one file and the `LotsOTasks` class loops through all 4 files and runs `TestTask` for each file.
 
 {% highlight python %}
 import luigi
@@ -262,7 +262,7 @@ if __name__ == '__main__':
     luigi.run()
 {% endhighlight %}
 
-We also have to make a `client.cfg` file that tells Luigi where the Hadoop binary is.  This looks like this:
+We also have to make a `client.cfg` file that tells Luigi where the Hadoop binary is.  This looks like:
 
 {% highlight yaml %}
 [hadoop]
@@ -271,7 +271,7 @@ streaming-jar: /path/to/hadoop-streaming-2.6.0.jar
 python-executable: /path/to/python
 {% endhighlight %}
 
-With that, we can pass the task to luigi.
+With that, we can pass the task to Luigi.
 
 {% highlight bash %}
 $ time luigi --module luigi_hadoop TestTaskMR --local-scheduler
@@ -355,7 +355,7 @@ real    0m14.367s
 {% endhighlight %}
 
 ### Code
-All of the code from this post is availble on GitHub [here](https://github.com/gte620v/code_snippets/tree/master/parallel).  You can run all variations of the mapper by calling `parallel_demo.sh`.
+All of the code from this post is availble on GitHub [here](https://github.com/gte620v/code_snippets/tree/master/parallel).  You can run all variations of the mapper by calling `parallel_demo.sh` from the `parallel` folder in that repo.
  
 
 
