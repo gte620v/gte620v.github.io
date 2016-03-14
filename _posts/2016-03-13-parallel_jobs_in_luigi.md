@@ -12,11 +12,11 @@ published: true
 
 ### Parallel Execution Options
 
-Distributing jobs over multiple cores/machines is a commonly encountered need when working with even moderately large datasets.  In fact, the whole big data ecosystem sprouted around this need.
+Distributing jobs over multiple cores/machines is a commonly encountered need when working with even moderately large datasets.  In fact, the whole big data ecosystem sprouted around this use case.
 
 If we don't need the power of a distributing a job over multiple machines and can instead get away with simply using multiple cores on one machine, then we can use something like Python's multithreading and multiprocessing modules.  Both of these modules require a fair amount of boilerplate code to even do simple things.  As an alternative, below I show examples in two tools that are relatively new to me: [Luigi](https://github.com/spotify/luigi) and [GNU Parallel](http://www.gnu.org/software/parallel/).  
 
-A simple use case might be that we have hundreds of csv log files and we need to map and filter out only lines of the log files that meet a certain criteria.  If you need to do something more versatile than maps and filters, or you want to have a degree of error recovery for subsets of the job that might go bad, GNU Parallel is not the best option.  Instead [Hadoop](http://hadoop.apache.org/) or [Spark](https://spark.apache.org/) are the tools to use. 
+A simple use case might be that we have hundreds of log files and we need to map and filter out only lines of the log files that meet a certain criteria.  If you need to do something more versatile than maps and filters, or you want to have a degree of error recovery for subsets of the job that might go bad, GNU Parallel is not the best option.  Instead [Hadoop](http://hadoop.apache.org/) or [Spark](https://spark.apache.org/) are the tools to use. 
 
 
 ### Example
