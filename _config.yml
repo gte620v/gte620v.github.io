@@ -22,8 +22,7 @@ kramdown:
 
 paginate: 5
 
-gems:
-  - jekyll-sitemap
+
 
 collections:
   about_pages:

@@ -77,6 +77,12 @@ a {
             font-size: 14px;
         }
     }
+	.left {
+		ol {
+			margin-left: 40px;
+			padding: 10px;
+		}
+	}
     .left, section {
         ul {
             margin: 5px 0px 5px 0px;     /*list-style: none;*/
