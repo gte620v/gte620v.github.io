@@ -8,20 +8,20 @@ published: true
 ## [{{ page.title }}]({{ page.url }})
 
 
-[![image]({{site.baseurl}}/images/spark-logo-trademark.png){:width="230px"}](https://spark.apache.org/)  [![image]({{site.baseurl}}/images/main-logo.svg){:width="320px"}](https://http://jupyter.org//)
+[![image]({{site.baseurl}}/images/main-logo.svg){:width="320px"}](https://http://jupyter.org//)
 
 
 ### Presentations
-I have been making and presenting slides for a long time and have never been very satisfied with the slide creation progams available.  Powerpoint has its strengths, but things like collaboration and mathematical equation editing are much harder than they should be.  Google Slides has been my slide editor for the last few years, mostly do the the fact that the slides will persist transparently in the cloud, but also because collaboartion is so easy.
+I have been making and presenting slides for a long time and have never been very satisfied with the slide creation programs available.  Powerpoint has its strengths, but things like collaboration and mathematical equation editing are much harder than they should be.  Google Slides has been my slide editor for the last few years, mostly do the fact that the slides will persist transparently in the cloud, but also because collaboration is so easy.
 
-Both Powerpoint and Slides have the disadvantage that is difficult to do anything programmatically.  For instance, I might have data that I want to show the first few rows of and also plot in its entirity.  Doing this in either of those programs requires cutting and pasting images from another interface where the plots are actually generated (e.g. Jupyter).
+Both Powerpoint and Slides have the disadvantage that is difficult to do anything programmatically.  For instance, I might have data that I want to show the first few rows of and also plot in its entirety.  Doing this in either of those programs requires cutting and pasting images from another interface where the plots are actually generated (e.g. Jupyter).
 
 The second shortcoming of these programs is that there is not good support for automatic typesetting like we have in LaTex.  Of course, there are slide "layouts", but these rarely look good and are limited to typesetting purely text slides.  For slides with images or plots, I find myself manually dragging around the images.
 
 Finally making block diagrams is much more difficult than it should be.  For instance, if I need to modify a diagram by adding an intermediate block, that should be simple.  But in GUI slide editors, the process for making such a modification involves manually moving around blocks and arrows, formatting the new content, then re-aligning everything.
 
 ### Missing Features
-These incumbant slide editors lack the following features:
+These incumbent slide editors lack the following features:
 
 1. No way to source control the slides.  That is, they don't integrate with the git workflow.
 2. No way to programmatically update data-driven plots and graphics.
@@ -32,6 +32,8 @@ In grad school I made a few slide decks with LaTeX, which does support both sour
 
 ### Jupyter
 I have been using Jupyter for a couple years now and I had wondered about the prospect of creating slides in Jupyter for a while, but I had never really investigated it until last week when I set out to create some introduction to Python slides for a class I was teaching.  I new I wanted to have most of the material in Jupyter so that the students could follow along and run code, but I also wanted slides.
+
+![image]({{site.baseurl}}/images/jupyter_slide_view.png){:width="220px"}
 
 In the spirit of lean development and OSS, I scoured Github for Jupyter notebooks that presented Python tutorials and I discovered [Class notes](https://github.com/neuroneuro15/SciPyCourse2016), which had a Jupyter feature enabled that I wasn't aware of: slide mode.  Basically, when you turn on this feature, each cell contains a dropdown box for you to indicate what type of slide that cell should be.  After a bit of Googling, I found the command to serve a Jupyter notebook as a slide deck in a browser:
 
