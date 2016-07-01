@@ -33,7 +33,6 @@ In grad school I made a few slide decks with LaTeX, which does support both sour
 ### Jupyter
 I have been using Jupyter for a couple years now and I had wondered about the prospect of creating slides in Jupyter for a while, but I had never really investigated it until last week when I set out to create some introduction to Python slides for a class I was teaching.  I new I wanted to have most of the material in Jupyter so that the students could follow along and run code, but I also wanted slides.
 
-![image]({{site.baseurl}}/images/jupyter_slide_view.png){:width="220px"}
 
 In the spirit of lean development and OSS, I scoured Github for Jupyter notebooks that presented Python tutorials and I discovered [Class notes](https://github.com/neuroneuro15/SciPyCourse2016), which had a Jupyter feature enabled that I wasn't aware of: slide mode.  Basically, when you turn on this feature, each cell contains a dropdown box for you to indicate what type of slide that cell should be.  After a bit of Googling, I found the command to serve a Jupyter notebook as a slide deck in a browser:
 
