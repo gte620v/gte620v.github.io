@@ -10,7 +10,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://rjbaxley.com" # the base hostname & protocol for your site
 twitter_username: Bob_Baxley
 github_username:  gte620v
-exclude: [vendor]
+exclude: [vendor,'*.ipynb']
 
 # Build settings
 markdown: kramdown
