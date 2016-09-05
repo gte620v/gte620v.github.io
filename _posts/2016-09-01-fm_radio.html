@@ -1,0 +1,48 @@
+--- 
+layout: post
+title: FM Radio Stations
+category: posts
+published: true
+---
+
+<h2><a href={{ page.url }}>{{ page.title }}</a></h2>
+<link rel="stylesheet" type="text/css" href="{{ site.url }}/css/distrochart.css">
+<br>
+<div style="height:1600px;">
+    <div class="tooltip"></div>
+    <div class="chart-wrapper" id="chart-distro1"></div>
+</div>
+<br>
+<br>
+<p>I was wondering the other day why it seems that non-profit radio stations are always on the left of the radio dial. I found
+    from <a href="https://www.quora.com/Why-are-public-radio-stations-always-at-the-bottom-of-the-FM-dial">Quora</a> that this is due to a 1945 ruling from FCC. </p>
+
+<p> Still, I thought it would be neat to visualize the distribution of stations by genre.  
+    Do do this, I scraped a few sites using a script that <a href="https://github.com/danlrobertson">@danlrobertson</a> made for one of our <a href="http://anidata.org">Anidata</a> hackathons that let's you hit websites through Tor.
+    The scraping code is <a href="https://github.com/anidata/palantiri/blob/master/src/core/engine.py">here</a>.</p>
+
+<p> With the data in hand, I explored some of the <a href="https://stanford.edu/~mwaskom/software/seaborn/api.html#categorical-plots">categorial plots</a> in <a href="https://stanford.edu/~mwaskom/software/seaborn/index.html">Seaborn</a> and decided that the violin and beeswarm plots were the most compelling.
+Static images never look quite as good as interactive d3.js plots on webpages, so I sought out some code that could render a beeswarm plot in d3 and found <a href="https://github.com/asielen/D3_Reusable_Charts/tree/master/distro_chart">distroplot</a>, which is a super cool library.
+After a bit of tweaking, I created the plot above.</p>  
+
+
+    <script src="{{ site.url }}/js/distrochart.js" charset="utf-8"></script>
+    <script type="text/javascript">
+    var chart1;
+    d3.csv('{{ site.url }}/data/fm_radio.csv', function(error, data) {
+        data.forEach(function (d) {
+            d.freq = +d.freq;
+        });
+
+        chart1 = makeDistroChart({
+            data:data,
+            xName:'format',
+            yName:'freq',
+            axisLabels: {xAxis: 'Format', yAxis: 'Frequency'},
+            selector:"#chart-distro1",
+            chartSize:{height:600, width:1600}});
+        chart1.renderDataPlots();
+        chart1.dataPlots.show({showPlot:true, plotType:'beeswarm',showBeanLines:false, colors:null});
+
+    });
+</script>

@@ -54,7 +54,7 @@ function makeDistroChart(settings) {
         axisLables: null,
         scale: 'linear',
         chartSize: { width: 800, height: 400 },
-        margin: { top: 15, right: 60, bottom: 140, left: 50 },
+        margin: { top: 15, right: 60, bottom: 100, left: 50 },
         constrainExtremes: false,
         color: d3.scale.category10()
     };
