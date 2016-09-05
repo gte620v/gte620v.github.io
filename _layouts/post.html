@@ -11,7 +11,7 @@ layout: default
         <li><a href="{{ site.baseurl }}/blog.html">Posts</a></li>
         {% assign nav_count = 1 %}
         {% assign sorted_pages = site.posts | sort:"order" %}
-        {% for node in sorted_pages %}
+        {% for node in site.posts %}
             {% if node.published %}
                 <li class="blog"><a href="{{ node.url }}">&nbsp;{{node.title}}</a>
                 </li>
