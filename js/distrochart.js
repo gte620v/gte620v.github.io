@@ -421,11 +421,11 @@ function makeDistroChart(settings) {
         for (var cName in chart.groupObjs) {
             chart.groupObjs[cName].g = chart.objs.g.append("g").attr("class", "group");
             chart.groupObjs[cName].g
-            .on("mouseover", function () {
+            .on("mouseover", function (d) {
                 chart.objs.tooltip
                     .style("display", null)
-                    .style("left", (0) + "px")
-                    .style("top", (0) + "px");
+                    .style("left", d3.event.pageX + "px")
+                    .style("top", d3.event.pageY + "px");
             }).on("mouseout", function () {
                 chart.objs.tooltip.style("display", null);
             })

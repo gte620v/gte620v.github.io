@@ -52,7 +52,7 @@
 }
 
 div.tooltip {
-    position: fixed;
+    position: absolute;
     text-align: left;
     padding: 3px;
     font: 12px sans-serif;
