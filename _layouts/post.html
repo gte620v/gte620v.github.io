@@ -8,7 +8,7 @@ layout: default
         <li><a href="{{ site.baseurl }}/cv.html">CV</a></li>
         <li><a href="{{ site.baseurl }}/pubs.html">Publications</a></li>
         <li><a href="{{ site.baseurl }}/links.html">Links</a></li>
-        <li><a href="{{ site.baseurl }}/blog.html">Posts</a></li>
+		<li><a href="{{site.posts.first.url}}">Blog</a></li>
         {% assign nav_count = 1 %}
         {% assign sorted_pages = site.posts | sort:"order" %}
         {% for node in site.posts %}

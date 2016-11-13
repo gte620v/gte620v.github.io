@@ -2,18 +2,14 @@
 
 {%- block header -%}
 ---
+layout: post
 title: "{{resources['metadata']['title']}}"
-original_title: "{{resources['metadata']['title']}}"
-original_file_path: "{{resources['metadata']['full_path']}}"
-original_extension: ipynb
-lines_of_code: {{resources['metadata']['loc']}}
-tags:
-    - jupyter
-    - python
-    - notebook
-layout: notebook
-
+category: posts
+published: true
 ---
+{% raw %}
+## [{{ page.title }}]({{ page.url }})
+{% endraw %}
 
 {%- endblock header -%}
 
