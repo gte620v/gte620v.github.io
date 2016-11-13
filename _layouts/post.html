@@ -2,30 +2,51 @@
 layout: default
 ---
 <div class="left_nav_bar">
-    {% include icons.html %}
-    <ul>
-        <li ><a href="{{ site.baseurl }}/index.html">About</a></li>
-        <li><a href="{{ site.baseurl }}/cv.html">CV</a></li>
-        <li><a href="{{ site.baseurl }}/pubs.html">Publications</a></li>
-        <li><a href="{{ site.baseurl }}/links.html">Links</a></li>
+	{% include icons.html %}
+	<ul>
+		<li ><a href="{{ site.baseurl }}/index.html">About</a></li>
+		<li><a href="{{ site.baseurl }}/cv.html">CV</a></li>
+		<li><a href="{{ site.baseurl }}/pubs.html">Publications</a></li>
+		<li><a href="{{ site.baseurl }}/links.html">Links</a></li>
 		<li><a href="{{site.posts.first.url}}">Blog</a></li>
-        {% assign nav_count = 1 %}
-        {% assign sorted_pages = site.posts | sort:"order" %}
-        {% for node in site.posts %}
-            {% if node.published %}
-                <li class="blog"><a href="{{ node.url }}">&nbsp;{{node.title}}</a>
-                </li>
-                {% assign nav_count = 1| plus:nav_count %}
-            {% endif %}
-        {% endfor %}
-    </ul>
+		{% assign nav_count = 1 %}
+		{% assign sorted_pages = site.posts | sort:"order" %}
+		{% for node in site.posts %}
+			{% if node.published %}
+				<li class="blog"><a href="{{ node.url }}">&nbsp;{{node.title}}</a>
+				</li>
+				{% assign nav_count = 1| plus:nav_count %}
+			{% endif %}
+		{% endfor %}
+	</ul>
 </div>
 <div class="main">
-    <div class="left">
-{{ content }}
-<br><br>
-    </div>
+	<div class="left">
+		{{ content }}
+		<br><br>
+	</div>
+
+<div id="disqus_thread"></div>
+<script>
+
+	/**
+	 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+ */
+(function() { // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+	s.src = '//rjbaxley.disqus.com/embed.js';
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
 
 
-    {% include foot.html %}
+{% include foot.html %}
