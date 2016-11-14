@@ -1,0 +1,31 @@
+.dataframe {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	margin: 10px 0px;
+	border: 0px;
+	font-size: inherit;
+
+	thead {
+		border-bottom: 1pt solid black;
+		border-top: 0pt solid white;
+		border-left: 0pt solid white;
+		border-right: 0pt solid white;
+	}
+
+	td, th {
+		padding: 4px;
+		font-weight: normal;
+	}
+
+	tr:nth-child(even) {
+		background-color: #f2f2f2;
+	}
+
+	tr:hover {
+		background-color: $grey;
+	}
+
+	th {
+		text-align: left;
+	}
+}

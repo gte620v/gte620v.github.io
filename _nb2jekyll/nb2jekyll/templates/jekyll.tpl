@@ -3,13 +3,14 @@
 {%- block header -%}
 ---
 layout: post
-title: "{{resources['metadata']['title']}}"
+title: "{{nb['metadata']['shorttitle']}}"
 category: posts
 published: true
 ---
 {% raw %}
-## [{{ page.title }}]({{ page.url }})
+# [{{ page.title }}]({{ page.url }})
 {% endraw %}
+
 
 {%- endblock header -%}
 
@@ -41,3 +42,9 @@ published: true
 {% block headingcell scoped %}
 {{ '#' * cell.level }} {{ cell.source | replace('\n', ' ') }}
 {% endblock headingcell %}
+
+{%- block footer -%}
+<hr><br />
+[Source Notebook File](https://github.com/gte620v/gte620v.github.io/tree/master/_ipynb/{{resources['metadata']['name']}}.ipynb)
+{%- endblock footer -%}
+
