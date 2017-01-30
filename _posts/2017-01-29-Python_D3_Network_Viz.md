@@ -72,7 +72,7 @@ fc.to_notebook('graph_demo.html')
 <iframe
 	width="500"
 	height="500"
-	src="graph_demo.html"
+	src="{{ site.url }}/images/graph_demo.html"
 	frameborder="0"
 	allowfullscreen
 ></iframe>
