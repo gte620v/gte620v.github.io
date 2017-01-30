@@ -63,25 +63,20 @@ from pyd3netviz import ForceChart
 
 G=random_geometric_graph(100,0.125)
 
-fc =ForceChart(G,charge=-100,link_distance=50)
-fc.to_notebook()
+fc =ForceChart(G,charge=-100,link_distance=50,width=550)
+fc.to_notebook('graph_demo.html')
 {% endhighlight %}
 
 
 
-<iframe
-	width="900"
-	height="700"
-	src="{{ site.url }}/images/graph_demo.html"
-	frameborder="0"
-	allowfullscreen
-></iframe>
+        <iframe
+            width="900"
+            height="700"
+            src="graph_demo.html"
+            frameborder="0"
+            allowfullscreen
+        ></iframe>
         
 
-
-
-{% highlight python %}
-
-{% endhighlight %}
 <hr><br />
 [Source Notebook File](https://github.com/gte620v/gte620v.github.io/tree/master/_ipynb/2017-01-29-Python_D3_Network_Viz.ipynb)
