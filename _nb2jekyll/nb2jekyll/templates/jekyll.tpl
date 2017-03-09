@@ -35,6 +35,10 @@ published: true
 ![jpeg]({{ output | base64image }})
 {% endblock data_jpg %}
 
+{% block data_html scoped %}
+{{ output.data['text/html'] | replace('..','{{ site.baseurl }}') | replace('        ','') }}
+{% endblock data_html %}
+
 {% block markdowncell scoped %}
 {{ cell.source | wrap_text(80) }}
 {% endblock markdowncell %}
