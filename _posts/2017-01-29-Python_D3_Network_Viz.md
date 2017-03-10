@@ -2,7 +2,7 @@
 layout: post
 title: "Python D3 Net Viz"
 category: posts
-published: true
+published: "true"
 ---
 
 # [{{ page.title }}]({{ page.url }})
@@ -63,7 +63,7 @@ from pyd3netviz import ForceChart
 
 G=random_geometric_graph(100,0.125)
 
-fc =ForceChart(G,charge=-100,link_distance=50,width=550)
+fc =ForceChart(G,charge=-100,link_distance=50,width=590)
 fc.to_notebook('../images/graph_demo.html')
 {% endhighlight %}
 

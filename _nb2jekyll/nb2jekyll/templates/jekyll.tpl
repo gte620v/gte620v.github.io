@@ -5,7 +5,7 @@
 layout: post
 title: "{{nb['metadata']['shorttitle']}}"
 category: posts
-published: true
+published: "{{nb['metadata']['published']}}"
 ---
 {% raw %}
 # [{{ page.title }}]({{ page.url }})

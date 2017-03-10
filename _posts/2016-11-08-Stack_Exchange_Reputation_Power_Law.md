@@ -2,7 +2,7 @@
 layout: post
 title: "Reputation Power Law"
 category: posts
-published: true
+published: "true"
 ---
 
 # [{{ page.title }}]({{ page.url }})
