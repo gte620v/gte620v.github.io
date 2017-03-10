@@ -40,7 +40,7 @@ published: "{{nb['metadata']['published']}}"
 {% endblock data_html %}
 
 {% block markdowncell scoped %}
-{{ cell.source | wrap_text(80) }}
+{{ cell.source | replace('..','{{ site.baseurl }}') | wrap_text(80) }}
 {% endblock markdowncell %}
 
 {% block headingcell scoped %}
