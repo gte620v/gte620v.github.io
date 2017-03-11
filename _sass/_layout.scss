@@ -1,182 +1,216 @@
 @mixin border-radius($radius) {
-    border-radius: $radius;
-    -webkit-border-radius: $radius;
-    -moz-border-radius: $radius;
-    -ms-border-radius: $radius;
-    -o-border-radius: $radius;
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	-o-border-radius: $radius;
 }
 
 /**
  * Reset some basic elements
  */
 body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, figure {
-    margin: 0;
-    padding: 0;
-    font-weight: normal;
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
 }
+
 h4 {
-    font-weight: bold;
-    padding-top: 10px;
+	font-weight: bold;
+	padding-top: 10px;
 }
+
 body {
-    font: normal normal 15px 'Trebuchet MS', Trebuchet, Verdana, sans-serif;
+	font: normal normal 15px 'Trebuchet MS', Trebuchet, Verdana, sans-serif;
 }
+
 a {
-    color: $accent-color;
-    text-decoration: none;
+	color: $accent-color;
+	text-decoration: none;
 }
+
 .holder {
-    margin: 0 auto;
-    width: $full-width;
+	margin: 0 auto;
+	width: $full-width;
 }
+
 .header, .foot {
-    padding: 0 10px 5px 5px;
-    float: right;
-    max-width: $main-width;
+	padding: 0 10px 5px 5px;
+	float: right;
+	max-width: $main-width;
 
-    .top-box {
-        $box-width: ($main-width) / $boxes  - 4px;
-        width: $box-width;
-        height: $box-width;
-        @include border-radius(30%);
-        float: left;
-        transition: 1s;
-        text-align: center;
-        vertical-align: middle;
-        font-size: 22px;
-        margin: 0 2px;
-        background: $grey;
-        color: $grey;
-    }
-    .top-box:hover {
-        background: #000;
-        color: #000;
-    }
-    a {
-        text-decoration: none;
-    }
+	.top-box {
+		$box-width: $main-width / $boxes - 4px;
+
+		width: $box-width;
+		height: $box-width;
+
+		@include border-radius(30%);
+
+		float: left;
+		transition: 1s;
+		text-align: center;
+		vertical-align: middle;
+		font-size: 22px;
+		margin: 0 2px;
+		background: $grey;
+		color: $grey;
+	}
+
+	.top-box:hover {
+		background: #000;
+		color: #000;
+	}
+
+	a {
+		text-decoration: none;
+	}
 }
+
 .foot {
-    padding-top: 50px;
+	padding-top: 50px;
 }
+
 .main {
-    padding: 0 5px;
-    float: right;
-    text-align: justify;
+	padding: 0 5px;
+	float: right;
+	text-align: justify;
 
-    section {
-        float: left;
-    }
-    .right {
-        padding: 0 10px;
-        float: right;
-        width: 160px;
-        text-align: right;
+	section {
+		float: left;
+	}
 
-        ul {
-            font-size: 14px;
-        }
-    }
+	.right {
+		padding: 0 10px;
+		float: right;
+		width: 160px;
+		text-align: right;
+
+		ul {
+			font-size: 14px;
+		}
+	}
+
 	.left {
 		ol {
 			margin-left: 40px;
 			padding: 10px;
 		}
 	}
-    .left, section {
-        ul {
-            margin: 5px 0px 5px 0px;     /*list-style: none;*/
-        }
-        .one {
-            padding-top: 5px;
-        }
-        float: left;
-        width: $main-width;
 
-        h2, .key-header {
+	.left, section {
+		ul {
+			margin: 5px 0px 5px 0px;
 
-            /*text-transform: lowercase;*/
-            padding-top: 25px;
-            font-weight: normal;
-            font-style: italic;
-            color: $accent-color;
-        }
-        .key-header {
-            display: block;
-            font-size: 1.5em;            /*font-weight: bold;*/
-        }
-        h3 {
+			/*list-style: none;*/
+		}
 
-            /*text-transform: lowercase;*/
-            padding-top: 10px;
-            font-weight: normal;
-            font-style: italic;
-            color: $accent-color;
-            margin-bottom: 5px;
-        }
-        p {
-            padding-bottom: 8px;
-            text-indent: 1em;
-        }
-    }
+		.one {
+			padding-top: 5px;
+		}
+
+		float: left;
+		width: $main-width;
+
+		h2, .key-header {
+			/*text-transform: lowercase;*/
+			padding-top: 25px;
+			font-weight: normal;
+			font-style: italic;
+			color: $accent-color;
+		}
+
+		.key-header {
+			display: block;
+			font-size: 1.5em;
+
+			/*font-weight: bold;*/
+		}
+
+		h3 {
+			/*text-transform: lowercase;*/
+			padding-top: 10px;
+			font-weight: normal;
+			font-style: italic;
+			color: $accent-color;
+			margin-bottom: 5px;
+		}
+
+		p {
+			padding-bottom: 8px;
+			text-indent: 1em;
+		}
+	}
 }
+
 .left_nav_bar {
-    position: fixed;
-    font-size: 18px;
-    width: $left-width;
+	position: fixed;
+	font-size: 18px;
+	width: $left-width;
 
-    .name {
-        padding: 0 2px;
-        font-size: 22px;
-        line-height: 1.2;
-    }
-    ul {
-        list-style: none;
-        padding: 0 0 0 0px;
-    }
-    li {
+	.name {
+		padding: 0 2px;
+		font-size: 22px;
+		line-height: 1.2;
+	}
 
-        /*text-transform: lowercase;*/
-        line-height: 1.3;
-        padding: 0;
-        padding-left: 0px;
-        padding-right: 4px;
-        @include border-radius(4px);
-        transition: 0.2s;
-        color: $accent-color;
-        cursor: pointer;
-        width: $highlight-width;
-        margin: 0;
-    }
-    .active {
-        background: $grey;
-    }
-    li:hover {
-        background: $grey;
-    }
-    h3, h4 {
-        text-align: left;
-        padding-bottom: 0px;
-    }
-    #head {
-        text-align: left;
-        padding-bottom: 0px;
-    }
-    .blog {
-        font-size: 14px;
-    }
+	ul {
+		list-style: none;
+		padding: 0 0 0 0px;
+		margin: 0px;
+	}
+
+	li {
+		/*text-transform: lowercase;*/
+		line-height: 1.3;
+		padding: 0;
+		padding-left: 0px;
+		padding-right: 4px;
+
+		@include border-radius(4px);
+
+		transition: 0.2s;
+		color: $accent-color;
+		cursor: pointer;
+		width: $highlight-width;
+		margin: 0;
+	}
+
+	.active {
+		background: $grey;
+	}
+
+	li:hover {
+		background: $grey;
+	}
+
+	h3, h4 {
+		text-align: left;
+		padding-bottom: 0px;
+	}
+
+	#head {
+		text-align: left;
+		padding-bottom: 0px;
+	}
+
+	.blog {
+		font-size: 14px;
+	}
 }
+
 .icon {
-    padding-top: 8px;
-    font-size: 16px;
-    color: black;
+	padding-top: 8px;
+	font-size: 16px;
+	color: black;
 
-    &:hover {
-        color: $accent-color;
-    }
+	&:hover {
+		color: $accent-color;
+	}
 }
+
 .footer {
-    height: 150px;
-    width: 100%;
-    display: inline-block;
+	height: 150px;
+	width: 100%;
+	display: inline-block;
 }
