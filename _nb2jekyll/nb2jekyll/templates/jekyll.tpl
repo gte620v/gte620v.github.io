@@ -36,11 +36,11 @@ published: "{{nb['metadata']['published']}}"
 {% endblock data_jpg %}
 
 {% block data_html scoped %}
-{{ output.data['text/html'] | replace('..','{{ site.baseurl }}') | replace('        ','') }}
+{{ output.data['text/html'] | replace('../','{{ site.baseurl }}/') | replace('        ','') }}
 {% endblock data_html %}
 
 {% block markdowncell scoped %}
-{{ cell.source | replace('..','{{ site.baseurl }}') | wrap_text(80) }}
+{{ cell.source | replace('../','{{ site.baseurl }}/') | wrap_text(80) }}
 {% endblock markdowncell %}
 
 {% block headingcell scoped %}
