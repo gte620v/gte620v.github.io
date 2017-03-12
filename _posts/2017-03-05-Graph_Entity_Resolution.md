@@ -843,7 +843,7 @@ iutMfF5VV4nI27vt82vA4yKyDVDgDeAg4JvAjSKyGHgd2BDt6zrcvM+LcL30G1T1kUFoC2OGJbua
 3RjTq+hq9qtV9bRi1wVARC4AVqrqkyIyBXhIVQ8udr2MKTbrmRtjSskK4DoR8XHD95cVuT7GDAvW
 MzfGGGNKnF0AZ4wxxpQ4C+bGGGNMibNgbowxxpQ4C+bGGGNMibNgbowxxpQ4C+bGGGNMifv/vRNB
 OyLi7OIAAAAASUVORK5CYII=
-)
+){:width="100%"}
 
 
 ### Post Date
@@ -1068,10 +1068,11 @@ below that we also add an attribute to each edge called `d3color`.
 
 I made a plotting library called <a
 href="https://github.com/gte620v/pyd3netviz">pyd3netviz</a> to use d3 to
-visualize network graphs in python (see <a href="">my previous post</a> about
-it). pyd3netviz can take networkx node an edge attributes as directives for
-styling the plots.  In this example, out function takes in a rgb tuple called
-`color` and uses that to specify the edge color.
+visualize network graphs in python (see <a href="{% post_url
+2017-01-29-Python_D3_Network_Viz %}">my previous post</a> about it). pyd3netviz
+can take networkx node an edge attributes as directives for styling the plots.
+In this example, out function takes in a rgb tuple called `color` and uses that
+to specify the edge color.
 
 
 {% highlight python %}
@@ -2912,7 +2913,7 @@ gUELEREReQKDFiIiIvIEBi1ERETkCQxaiIiIyBMYtBAREZEnMGghIiIiT2DQQkRERJ7AoIWIiIg8
 gUELEREReQKDFiIiIvIEBi1ERETkCQxaiIiIyBMYtBAREZEnMGghIiIiT2DQQkRERJ7AoIWIiIg8
 gUELEREReQKDFiIiIvIEBi1ERETkCQxaiIiIyBMYtBAREZEnMGghIiIiT2DQQkRERJ7AoIWIiIg8
 gUELEREReQKDFiIiIvKE/w90GbA04nDcxgAAAABJRU5ErkJggg==
-)
+){:width="100%"}
 
 
 ## Resources

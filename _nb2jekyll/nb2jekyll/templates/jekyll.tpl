@@ -24,15 +24,15 @@ published: "{{nb['metadata']['published']}}"
 {% endblock input %}
 
 {% block data_svg %}
-![svg]({{ output | base64image }})
+![svg]({{ output | base64image }}){:width="100%"}
 {% endblock data_svg %}
 
 {% block data_png %}
-![png]({{ output | base64image }})
+![png]({{ output | base64image }}){:width="100%"}
 {% endblock data_png %}
 
 {% block data_jpg %}
-![jpeg]({{ output | base64image }})
+![jpeg]({{ output | base64image }}){:width="100%"}
 {% endblock data_jpg %}
 
 {% block data_html scoped %}

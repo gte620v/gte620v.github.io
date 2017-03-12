@@ -620,7 +620,7 @@ XnzxRaxZswYxMTG4fPkytm/fjvb2dqhUKnh4eEAmk2Hz5s04duyY3nGcnZ1RWFiI33//HdHR0UhP
 T0dUVBSysrIe+/MSkWWy0fLPHyIycwsXLsTbb7+N2NhYsUchojGGV5SIiIiIDGBRIiKzx6eziEgs
 fOqNiIiIyABeUSIiIiIygEWJiIiIyAAWJSIiIiIDWJSIiIiIDGBRIiIiIjLgf4mjEvRoHY24AAAA
 AElFTkSuQmCC
-)
+){:width="100%"}
 
 
 This plot shows that there are many users that have unique reputation scores.
@@ -1127,7 +1127,7 @@ IiUlBQkJCZgwYQIWL16MqKgoXLx4EevXr0ddXR10Oh28vLwQERGB1atX4+DBgybbUSgU2Lt3L/78
 809ERkZi1apVCA8PR1pa2lN/XiKyTQ5d/POHiKzc1KlT8f777yM6OlrqUYiol+ERJSIiIiIBLEpE
 ZPX4dhYRSYVvvREREREJ4BElIiIiIgEsSkREREQCWJSIiIiIBLAoEREREQlgUSIiIiIS8F/BH834
 KXsbxgAAAABJRU5ErkJggg==
-)
+){:width="100%"}
 
 
 The linear fit looks pretty good.  Let's run the same experiment with reputation
@@ -1652,7 +1652,7 @@ pXjllVfMrjV58mTk5OQgPT0dKSkpiIyMxHPPPYf4+HgcP34cb775Js6fPw+VSoUOHTogJiYGb7zx
 Br788kuz83h6emLNmjW4fPkyYmNj8frrryM6OhqLFi1q9uclIufkYuRff4jIwQ0bNgzTp09HQkKC
 2KUQURvDO0pEREREVjAoEZHD4+MsIhILH70RERERWcE7SkRERERWMCgRERERWcGgRERERGQFgxIR
 ERGRFQxKRERERFb8f5F2zYrAOKHpAAAAAElFTkSuQmCC
-)
+){:width="100%"}
 
 
 The SO reputation pdf looks much less linear, but fits a quadratic line really
@@ -2128,7 +2128,7 @@ H30US5cuxbPPPuvxXTNnzkRVVRXKysowe/Zs5Obm4qmnnkJhYSEOHjyIV155BSdPnoTFYkG/fv2Q
 l5eHF198ER988IHHdfR6PVatWoWmpibk5+fjhRdewJQpU7Bo0aKAvy8RRaYYF//1h4jC3KRJk/Cz
 n/0MRUVFSpdCRH0MZ5SIiIiIfGBQIqKwx9tZRKQU3nojIiIi8oEzSkREREQ+MCgRERER+cCgRERE
 ROQDgxIRERGRDwxKRERERD78P5Epdnfd7BxgAAAAAElFTkSuQmCC
-)
+){:width="100%"}
 
 
 ## Conclusion
