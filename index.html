@@ -1,23 +1,43 @@
 ---
 layout: default
+title: CV
 ---
 <div class="left_nav_bar">
-  {% include icons.html %}
-  <ul>
-    <li data-scroll-nav="0">About</li>
-    <li><a href="cv.html">CV</a></li>
-    <li><a href="pubs.html">Publications</a></li>
-    <li><a href="links.html">Links</a></li>
-	<li><a href="{{site.posts.first.url}}">Blog</a></li>
-  </ul>
+
+	{% include icons.html %}
+	<ul>
+		<li data-scroll-nav="0">CV</li>
+		{% assign nav_count = 1 %}
+		{% assign sorted_pages = site.about_pages | sort:"order" %}
+		{% for node in sorted_pages %}
+			{% if node.published %}
+				<li data-scroll-nav="{{nav_count}}" class="blog">&nbsp;{{node.title}}
+				</li>
+				{% assign nav_count = 1| plus:nav_count %}
+			{% endif %}
+		{% endfor %}
+		<li><a href="pubs.html">Publications</a></li>
+		<li><a href="links.html">Links</a></li>
+		<li><a href="{{site.posts.first.url}}">Blog</a></li>
+	</ul>
+
 </div>
 <div class="main">
-  <div class="left">
-    <h2 class="one"> About </h2>
-    <div class="right"><img src="{{site.baseurl}}/images/bob.jpeg" width=200></div>
-    <p>I am a Signal Processing Researcher and Data Scientist.  Currently, I work at <a href="http://bastille.io" target="_blank">Bastille</a> where I am helping to build new and cool radio frequency technologies with the goal of providing security for the Internet of Things.  </p>
-    <p>Prior to joining Bastille in 2014, I held various faculty positions at <a href="http://gatech.edu" target="_blank">Georgia Tech</a>.  Most recently, I served as the Director of the Software Defined Radio Lab, where I researched and built cognitive radios.  I currently hold an adjunct appointment at Georgia Tech through which I advise graduate students and teach courses.</p>
-    <p>My academic background is in statistical signal processing, estimation theory, and machine learning. </p>
-  </div>
+	<div class="left">
+		{% assign section_count = 1 %}
+		{% assign sorted_pages = site.about_pages | sort:"order" %}
+		{% for node in sorted_pages %}
+			{% if node.published %}
+				<section  data-scroll-index="{{section_count}}">
+					<a name="{{section_count}}"></a>
+					{{node.content}}
+				</section>
+				{% assign section_count = 1| plus:section_count %}
+			{% endif %}
+		{% endfor %}
+	</div>
 </div>
+
+
+
 {% include foot.html %}
